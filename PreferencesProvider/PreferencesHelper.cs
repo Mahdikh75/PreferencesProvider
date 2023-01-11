@@ -54,7 +54,6 @@ namespace PreferencesProvider
 
         public object Get<T>(string key, T def)
         {
-
             if (def is bool)
                 return isp.GetBoolean(key, Convert.ToBoolean(def));
 
