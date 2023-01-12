@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Android.Content;
+using System;
 using System.Collections.Generic;
-using Android.Content;
 
 namespace PreferencesProvider
 {
@@ -31,6 +31,11 @@ namespace PreferencesProvider
         {
             isp = context.GetSharedPreferences(Name_Preferences, File_mode);
             edit = isp.Edit();
+        }
+        ~PreferencesHelper()
+        {
+            isp.Dispose();
+            edit.Dispose();
         }
         public void Set<T>(string key, T value)
         {
