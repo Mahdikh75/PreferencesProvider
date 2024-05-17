@@ -8,10 +8,9 @@ namespace PreferencesProvider
     {
         private ISharedPreferences isp;
         private ISharedPreferencesEditor edit;
-
         private FileCreationMode mode = FileCreationMode.MultiProcess;
-        private string NamePreferences = "Data";
 
+        public string NamePreferences = "Data";
         public const string Setting = "Setting";
         public const string App = "App";
         public const string Cache = "Cache";
